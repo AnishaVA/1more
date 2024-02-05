@@ -1,0 +1,328 @@
+body{
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    margin:0;
+    box-sizing: border-box;
+}
+
+img {    
+    max-width: 5%; 
+    margin-top: 2%;
+    height: auto;
+}
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#hero-section {
+    position: relative;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+}
+video {
+    width: 100%; /* Make the video take up the full width of its container */
+    height: 100%; /* Make the video take up the full height of its container */
+    object-fit: cover; /* Ensure the video covers the entire container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.row-box {
+    position: relative;
+    text-align: center;
+    border-block:  solid #000 3px;
+    margin-top: 0;    
+    color: #fff; /* Set text color as needed */
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.heading{
+    text-align: center;
+}
+
+.column-box {
+    gap: 6%;
+    display: flex;
+    /* justify-content: space-between; */
+    max-width: 60%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+/* .column {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Set the background color with some transparency */
+    /* border-radius: 8px; 
+} */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a button {
+    padding: 30px 30px;
+    background-color: #020202;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+a button:hover {
+    background-color: #6c707280;
+}
+
+.column img {
+    max-width: 200%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px; /* Add some spacing between the button and the image */
+    transition:  transform 0.4s ease-in-out;
+}
+
+
+.register-container {
+  margin: 50px auto; /* Adjust container margin */
+  padding: 20px;
+  margin-bottom: 20px;
+  /* border: 2px solid #ccc; Border line */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Optional: Add a subtle box shadow */
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  margin-top: 5px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.input-data {
+  position: relative;
+  width: 45%; /* Adjust input width */
+}
+
+.input-data input{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Underline */
+  background-color: #000; /* White background */
+  color:#fff;
+}
+
+.input-data textarea,submit-btn {
+  align-items: center;
+  width: 215%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Underline */
+  background-color: #000; /* White background */
+  color:#fff;
+
+}
+
+.input-data textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.input-data label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  font-size: 14px;
+  color: #fff; /* Label color */
+  transition: 0.2s ease-out;
+}
+
+.input-data input:focus,
+.input-data textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff; /* Highlight when focused */
+}
+
+.input-data input:not(:placeholder-shown) + label,
+.input-data textarea:not(:placeholder-shown) + label {
+  top: -15px;
+  font-size: 12px;
+  color: #ffffff; /* Highlight color */
+}
+
+ /* .inner {
+  width: 200%;
+  height: 3px;
+  background-color: #000000; Inner line color
+ }  */
+
+input[type="submit"] {
+  color: #fff; /* Submit button text color */
+  font-size: 14px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #fff; /* Hover color */
+  color: #000;
+  font-size: 14px;
+}
+
+select .select-data{
+  border-radius: 10px !important;
+  padding: 0px; /* Adjust the padding value as needed */
+}
+
+
+/* Resetting default styles for select elements */
+select {
+  appearance: none;
+  /* -webkit-appearance: textfield !important; */
+  -moz-appearance: none;
+  color:#fff;
+  background-color: #000000;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  /* box-sizing: border-box; */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Styling the arrow icon for the select element */
+select::-ms-expand {
+  display: none;
+  color:#fff;
+}
+
+.select-data {
+  width: 33.33%; /* Adjust the width as needed for three selects in a line */
+  /* box-sizing: border-box; */
+  display: inline-block;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+/* Clearfix to prevent line breaks */
+.form-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.select-label {
+  margin-bottom: 10px; /* Add some space between label and underline */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.select-data {
+  width: 20%; /* Make select fields take up the full width */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+
+.footer-container a:hover {
+  color: #ffffff;
+  padding-left: 2px;
+}
+
+.col-md-12 a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color:rgb(255, 255, 255);
+  margin: 0 12px 12px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 60%;
+  color: #000;
+  transition: all 0.5s ease;
+  margin-top: 100%;
+  border-top: 1px solid #fff;
+}
+
+.social-links p{
+  font-size: x-small;
+}
+
+.social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+} 
+
+
+footer {
+  background-color: #000;
+  color: #fff;
+  /* padding: 20px 0; */
+  padding-left: 10%;
+}
+
+.footer-container {
+  max-width: 200%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.address {
+  flex: 1; /* Make both address and social-links take up equal width */
+  font-size: 14px;
+}
+
+
+.address h5{
+  margin-bottom: 10px;
+}
+.contact{
+  margin-right: 20%;
+  font-size: 14px;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 14px;
+  align-items: center;
+  margin-right: 15px;
+  
+}
+
+.address {
+  margin-left:10%;
+}
+/* Clearfix to prevent content from overflowing */
+.footer-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
